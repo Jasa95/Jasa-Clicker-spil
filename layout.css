@@ -1,104 +1,105 @@
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: url(/Img/background.png) no-repeat center center fixed;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(/Img/background.png) no-repeat center center fixed;
 }
 
 img {
-    width: 100%;
+  width: 100%;
+}
+
+span.count {
+  size: 23px;
 }
 
 #screen {
-    aspect-ratio: 16/9;
-    display: grid;
-    grid-template: 100% / 100%;
+  aspect-ratio: 16/9;
+  display: grid;
+  grid-template: 100% / 100%;
 }
 #game {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
 }
 #start {
-    margin: 120px auto 0;
-    padding: 20px;
-    width: 30em;
-    scale: 100%;
-    background-color: antiquewhite;
+  margin: 120px auto 0;
+  padding: 20px;
+  width: 30em;
+  scale: 100%;
+  background-color: antiquewhite;
 }
 #game-over {
-    margin: 120px auto 0;
-    padding: 20px;
-    width: 30em;
-    scale: 100%;
-    background-color: antiquewhite;
+  margin: 120px auto 0;
+  padding: 20px;
+  width: 30em;
+  scale: 100%;
+  background-color: antiquewhite;
 }
 
 #elements {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
 }
 #foreground {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #game-ui {
-    width: 60px;
-    position: absolute;
-    top: 0%;
-    left: 0%;
+  width: 60px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
 }
 
 /* Spil elementer */
 
 /* Enemies */
 #enemy1_container {
-    width: 3%;
-    position: absolute;
+  width: 3%;
+  position: absolute;
 }
 
 #enemy2_container {
-    width: 3%;
-    position: absolute;
+  width: 3%;
+  position: absolute;
 }
 #enemy3_container {
-    width: 3%;
-    position: absolute;
+  width: 3%;
+  position: absolute;
 }
 #enemy4_container {
-    width: 5%;
-    position: absolute;
+  width: 5%;
+  position: absolute;
 }
 
 /* Friendly */
 
 #friend1_container {
-    width: 4%;
-    position: absolute;
+  width: 4%;
+  position: absolute;
 }
 #friend2_container {
-    width: 4%;
-    position: absolute;
+  width: 4%;
+  position: absolute;
 }
 #friend3_container {
-    width: 4%;
-    position: absolute;
+  width: 4%;
+  position: absolute;
 }
 #friend4_container {
-    width: 4%;
-    position: absolute;
+  width: 4%;
+  position: absolute;
 }
 
-
-
-
 .position1 {
-  left: 4vw;
-  top: 15vw;
+  left: 40vw;
+  top: 5vw;
   animation-name: position1;
   animation-duration: 3s;
   animation-timing-function: linear;
@@ -107,7 +108,7 @@ img {
 }
 
 .position2 {
-  left: 4vw;
+  left: 40vw;
   top: 12vw;
   animation-name: position2;
   animation-duration: 15s;
@@ -117,7 +118,7 @@ img {
 }
 
 .position3 {
-  left: 10vw;
+  left: 50vw;
   top: 10vw;
   animation-name: position3;
   animation-duration: 4s;
@@ -127,7 +128,7 @@ img {
 }
 
 .position4 {
-  left: 20vw;
+  left: 30vw;
   top: 0;
   animation-name: position4;
   animation-duration: 9s;
@@ -138,7 +139,7 @@ img {
 
 .position5 {
   left: 25vw;
-  bottom: 20vw;
+  bottom: 50vw;
   animation-name: position5;
   animation-duration: 12s;
   animation-timing-function: linear;
@@ -152,55 +153,55 @@ img {
   animation-name: position6;
   animation-duration: 7s;
   animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .position7 {
-    left: 15vw;
-    bottom: 12vw;
-    animation-name: position7;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  left: 56vw;
+  bottom: 12vw;
+  animation-name: position7;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .position8 {
-    left: 16vw;
-    top: 2vw;
-    animation-name: position8;
-    animation-duration: 7s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  left: 26vw;
+  top: 2vw;
+  animation-name: position8;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .zoom_out {
-    animation-name: zoom_out;
-    animation-duration: 0.5s;
+  animation-name: zoom_out;
+  animation-duration: 0.5s;
 }
 
 .running {
-    animation-name: running_animation;
-    animation-duration: 7s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  animation-name: running_animation;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 @keyframes zoom_out {
-    0% {
-        scale: 1;
-    } 
-    100% {
-        scale: 0;
-    }
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 0;
+  }
 }
 
 @keyframes position1 {
-    0% {
-          transform: translate(0, 10vw);
+  0% {
+    transform: translate(0, 10vw);
   }
 
   30% {
@@ -208,52 +209,48 @@ img {
   }
   100% {
     transform: translate(5vw, 25vw);
-  
-    }
+  }
 }
 @keyframes position2 {
-    0% {
-          transform: translate(10vw, 10vw);
+  0% {
+    transform: translate(0vw, 10vw);
   }
 
   41% {
-    transform: translate(35vw, -14vw);
+    transform: translate(5vw, -14vw);
   }
   100% {
     transform: translate(5vw, 25vw);
-  
-    }
+  }
 }
 @keyframes position3 {
-    0% {
-          transform: translate(20vw, 13vw);
+  0% {
+    transform: translate(0vw, 13vw);
   }
 
   24% {
-    transform: translate(25vw, -17vw);
+    transform: translate(5vw, -17vw);
   }
   100% {
     transform: translate(15vw, 29vw);
-  
-    }
+  }
 }
 
 @keyframes position4 {
-    0% {
-          transform: translate(10vw, 17vw);
+  0% {
+    transform: translate(0vw, 17vw);
   }
 
   45% {
-    transform: translate(2vw, -12vw);
+    transform: translate(0vw, -12vw);
   }
   100% {
     transform: translate(16vw, 18vw);
-  
-    }
+  }
 }
 @keyframes position5 {
-    0% {
-          transform: translate(16vw, 12vw);
+  0% {
+    transform: translate(6vw, 12vw);
   }
 
   45% {
@@ -261,12 +258,11 @@ img {
   }
   100% {
     transform: translate(6vw, 16vw);
-  
-    }
+  }
 }
 @keyframes position6 {
-    0% {
-          transform: translate(9vw, 10vw);
+  0% {
+    transform: translate(9vw, 10vw);
   }
 
   45% {
@@ -274,12 +270,11 @@ img {
   }
   100% {
     transform: translate(26vw, 9vw);
-  
-    }
+  }
 }
 @keyframes position7 {
-    0% {
-          transform: translate(49vw, 10vw);
+  0% {
+    transform: translate(9vw, 10vw);
   }
 
   45% {
@@ -287,13 +282,12 @@ img {
   }
   100% {
     transform: translate(22vw, 39vw);
-  
-    }
+  }
 }
 
 @keyframes position8 {
-    0% {
-          transform: translate(0, 30vw);
+  0% {
+    transform: translate(0, 30vw);
   }
 
   45% {
@@ -301,10 +295,9 @@ img {
   }
   100% {
     transform: translate(10vw, 15vw);
-  
-    }
+  }
 }
 
 .hidden {
-    display: none;
+  display: none;
 }

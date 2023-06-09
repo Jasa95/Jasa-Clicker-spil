@@ -20,14 +20,14 @@ function gameStart() {
   startEveryAnimations();
 
   function startEveryAnimations() {
-    document.querySelector("#enemy1_container").classList.add("running");
-    document.querySelector("#enemy2_container").classList.add("running");
-    document.querySelector("#enemy3_container").classList.add("running");
-    document.querySelector("#enemy4_container").classList.add("running");
-    document.querySelector("#friend1_container").classList.add("running");
-    document.querySelector("#friend2_container").classList.add("running");
-    document.querySelector("#friend3_container").classList.add("running");
-    document.querySelector("#friend4_container").classList.add("running");
+    document.querySelector("#enemy1_container").classList.add("position1");
+    document.querySelector("#enemy2_container").classList.add("position2");
+    document.querySelector("#enemy3_container").classList.add("position3");
+    document.querySelector("#enemy4_container").classList.add("position4");
+    document.querySelector("#friend1_container").classList.add("position5");
+    document.querySelector("#friend2_container").classList.add("position6");
+    document.querySelector("#friend3_container").classList.add("position7");
+    document.querySelector("#friend4_container").classList.add("position8");
   }
   document
     .querySelector("#enemy1_container")
@@ -92,9 +92,9 @@ function enemyGone() {
   enemy.querySelector("img").classList.remove("zoom_out");
   enemy.classList.remove("paused");
 
-  enemy.classList.remove("running");
+  enemy.classList.remove("position");
   enemy.offsetWidth;
-  enemy.classList.add("running");
+  enemy.classList.add("position");
 
   enemy.addEventListener("mousedown", enemyClicked);
   enemySpawn.call(this);
@@ -150,19 +150,20 @@ function friendGone() {
   friend.removeEventListener("animationend", friendGone);
   friend.querySelector("img").classList.remove("zoom-out");
 
-  friend.classList.remove("running");
+  friend.classList.remove("position");
   friend.offsetWidth;
-  friend.classList.add("running");
+  friend.classList.add("position");
 
   friend.addEventListener("mousedown", friendClicked);
+  friendSpawn.call(this);
 }
 function friendSpawn() {
   let friend = this;
   friend.removeEventListener("animationend", friendSpawn);
-  friend.classList.remove("running");
+  friend.classList.remove("position");
   friend.offsetWidth;
-  let number = Math.floor(Math.random() * 4) + 1;
-  friend.classList.add("running" + number);
+  let number = Math.floor(Math.random() * 3) + 1;
+  friend.classList.add("position" + number);
   friend.classList.remove(
     "position1",
     "position2",
@@ -174,7 +175,7 @@ function friendSpawn() {
     "position8"
   );
 
-  let pos = Math.floor(Math.random() * 8) + 1;
+  let pos = Math.floor(Math.random() * 7) + 1;
   friend.classList.add("position" + pos);
   friend.addEventListener("animationend", friendSpawn);
 }
