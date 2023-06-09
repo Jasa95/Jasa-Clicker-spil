@@ -1,52 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="layout.css">
-    <title>Clicker-spil</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="layout.css" />
+    <title>Picnic-spil</title>
+  </head>
+  <body>
     <div id="screen">
-        <div id="game">
-            <div id="background"></div>
-            <div id="elements">
-                <div id="Brown-ant">
-                    <img src="/Img/ant.gif" alt="">
-                </div>
-                <div id="Beetle">
-                    <img src="/Img/beetle.gif" alt="">
-                </div>
-                <div id="Wasp">
-                    <img src="/Img/waspy boi.gif" alt="">
-                </div>
-                <div id="Butterflys">
-                    <img src="/Img/butterfly.gif" alt="">
-                </div>
-                <div id="Ladybug">
-                    <img src="/Img/ladybug.gif" alt="">
-                </div>
-                <div id="Bumble">
-                    <img src="/Img/bumblebee.gif" alt="">
-                </div>
-                <div id="Spider">
-                    <img src="/Img/spider.gif" alt="">
-                </div>
-                <div id="Snail">
-                    <img src="/Img/snail.gif" alt="">
-                </div>
-            </div>
-            <div id="foreground"></div>
-            <div id="game-ui">
-                <img id="Life-1" src="/Img/appellife.png" alt="">
-                <img id="Life-2" src="/Img/appellife.png" alt="">
-                <img id="Life-3" src="/Img/appellife.png" alt="">
-            </div>
+    <div id="game">
+        <div id="background"></div>
+        <div id="elements">
+          <div id="enemy1_container">
+            <img id="bomb1_sprite" src="/Img/ant.gif" alt="Brown-ant" />
+          </div>
+          <div id="enemy2_container">
+            <img id="bomb2_sprite" src="/Img/beetle.gif" alt="Beetle" />
+          </div>
+          <div id="enemy3_container">
+            <img id="bomb3_sprite" src="/Img/waspy boi.gif" alt="Wasp" />
+          </div>
+          <div id="enemy4_container">
+            <img id="bomb4_sprite" src="/Img/spider.gif" alt="Spider" />
+          </div>
+          <div id="friend1_container">
+            <img id="coin1_sprite" src="/Img/butterfly.gif" alt="Butterfly" />
+          </div>
+          <div id="friend2_container">
+            <img id="coin2_sprite" src="/Img/ladybug.gif" alt="Ladybug" />
+          </div>
+          <div id="friend3_container">
+            <img id="coin3_sprite" src="/Img/bumblebee.gif" alt="bumblebee" />
+          </div>
+          <div id="friend4_container">
+            <img id="coin4_sprite" src="/Img/snail.gif" alt="Snail" />
+          </div>
         </div>
-        <div id="start"></div>
-        <div id="game-over"></div>
+        <div id="foreground">
+          <div id="game-ui">
+            <div id="coin_image_container">
+                <span id="coin_count" class="count">0</span>
+            </div>
+          
+            <div id="life-container"> 
+                <img id="Life1" src="/Img/appellife.png" class="active-apple" alt="liv" />
+                <img id="lostLife1" src="/Img/appledeath.png" alt="død" class="hidden">
+                <img id="Life2" src="/Img/appellife.png" class="active-apple" alt="liv" />
+                <img id="lostLife2" src="/Img/appledeath.png" alt="død" class="hidden">
+                <img id="Life3" src="/Img/appellife.png" class="active-apple" alt="liv" />
+                <img id="lostLife3" src="/Img/appledeath.png" alt="død" class="hidden">
+            </div>
+          </div>
+        </div>
+        <section id="start">
+
+            <h2>Picnic Spil</h2>
+            <p>Du er ude og nyde solen på en dansk sommer med en god picnic sammen med dine venner 
+                <br>
+                På en hver picnic støder man på nogle forskellige insekter og kryb!
+                <br>
+                <br>
+                <br>
+                Spillet:
+                Du skal holde de irriterende dyr væk fra din picninc ved at klikke på dem, men undgå at ramme de fredelige dyr!
+                <br>
+                <b>Fjener:</b> Myre, hvisp, bille og edderkop!
+                <br>
+                <b>Fredelige:</b> Sommerfugl, mariehønne, brumbasse og snegl!
+                <br>
+            </p>
+                <button id="btn_start" class="pulse"> 
+                    <img src="Img/start.png"/> 
+                </button>
+        
+        </section>
+        <div id="game-over" class="hidden"> <img src="Img/gameover.png"> 
+            <br> 
+            Du har slået for mange fredelige dyr ihjel! nu er de også i mod dig og det er ikke fedt, 
+            være på picnic mere!
+            <br>
+            Spil igen
+            <br>
+            <button id="btn_restart" class="pulse"> <img src="Img/start.png"></button> 
+        </div>
     </div>
-    
-</body>
+    </div>
+    <audio id="sound-enemy-dead" src="audio/cartoon-splat-6086.mp3"></audio>
+    <audio id="sound-friendly-fire" src="audio/bruh-sound-effect-1-6970.mp3"></audio>
+    <audio id="sound-start" src="audio/yeah-boy-114748.mp3"></audio>
+    <audio id="sound-background" src="audio/very-lush-and-swag-loop-74140.mp3" loop></audio>
+    <audio id="sound-gameover" src="audio/dead-8bit-41400.mp3"></audio>
+    <script src="app.js"></script>
+  </body>
 </html>

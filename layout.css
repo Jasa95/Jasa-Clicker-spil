@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(/Img/background.png) no-repeat center center fixed;
 }
 
 img {
@@ -7,49 +9,31 @@ img {
 }
 
 #screen {
-    position: relative;
-    width: 100%;
     aspect-ratio: 16/9;
+    display: grid;
+    grid-template: 100% / 100%;
 }
 #game {
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    
+    position: fixed;
+    overflow: hidden;
 }
 #start {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 20%;
-    left: 0%;
-    background-image: url(Img/start.png);
-    scale: 10%;
-    background-repeat: no-repeat;
+    margin: 120px auto 0;
+    padding: 20px;
+    width: 30em;
+    scale: 100%;
+    background-color: antiquewhite;
 }
 #game-over {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    background-image: url(/Img/gameover.png);
-    background-size: contain;
-    scale: 20%;
-    background-repeat: no-repeat;
+    margin: 120px auto 0;
+    padding: 20px;
+    width: 30em;
+    scale: 100%;
+    background-color: antiquewhite;
 }
-#background {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    background-image: url(/Img/background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 #elements {
     width: 100%;
     height: 100%;
@@ -58,18 +42,12 @@ img {
     left: 0%;
 }
 #foreground {
-    width: 10%;
-    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(/Img/fly-swatter.png);
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 #game-ui {
-    width: 7%;
-    height: 100%;
+    width: 60px;
     position: absolute;
     top: 0%;
     left: 0%;
@@ -78,60 +56,255 @@ img {
 /* Spil elementer */
 
 /* Enemies */
-#Brown-ant {
-    width: 5%;
+#enemy1_container {
+    width: 3%;
     position: absolute;
-    top: 18%;
-    left: 37%;
 }
 
-#Beetle {
-    width: 5%;
-    height: 100%;
+#enemy2_container {
+    width: 3%;
     position: absolute;
-    top: 15%;
-    left: 43%;
 }
-#Spider {
-    width: 9%;
-    height: 100%;
+#enemy3_container {
+    width: 3%;
     position: absolute;
-    top: 5%;
-    left: 34%;
 }
-#Wasp {
+#enemy4_container {
     width: 5%;
     position: absolute;
-    top: 7%;
-    left: 43%;
 }
 
 /* Friendly */
 
-#Butterflys {
+#friend1_container {
     width: 4%;
     position: absolute;
-    top: 23%;
-    left: 13%;
 }
-#Bumble {
+#friend2_container {
     width: 4%;
     position: absolute;
-    top: 26%;
-    left: 16%;
 }
-#Ladybug {
-    width: 6%;
-    height: 100%;
-    position: absolute;
-    top: 15%;
-    left: 14%;
-}
-#Snail {
+#friend3_container {
     width: 4%;
-    height: 100%;
     position: absolute;
-    top: 19%;
-    left: 17%;
+}
+#friend4_container {
+    width: 4%;
+    position: absolute;
 }
 
+
+
+
+.position1 {
+  left: 4vw;
+  top: 15vw;
+  animation-name: position1;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.position2 {
+  left: 4vw;
+  top: 12vw;
+  animation-name: position2;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.position3 {
+  left: 10vw;
+  top: 10vw;
+  animation-name: position3;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.position4 {
+  left: 20vw;
+  top: 0;
+  animation-name: position4;
+  animation-duration: 9s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.position5 {
+  left: 25vw;
+  bottom: 20vw;
+  animation-name: position5;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.position6 {
+  left: 23vw;
+  bottom: 16vw;
+  animation-name: position6;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.position7 {
+    left: 15vw;
+    bottom: 12vw;
+    animation-name: position7;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.position8 {
+    left: 16vw;
+    top: 2vw;
+    animation-name: position8;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.zoom_out {
+    animation-name: zoom_out;
+    animation-duration: 0.5s;
+}
+
+.running {
+    animation-name: running_animation;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes zoom_out {
+    0% {
+        scale: 1;
+    } 
+    100% {
+        scale: 0;
+    }
+}
+
+@keyframes position1 {
+    0% {
+          transform: translate(0, 10vw);
+  }
+
+  30% {
+    transform: translate(-32vw, -14vw);
+  }
+  100% {
+    transform: translate(5vw, 25vw);
+  
+    }
+}
+@keyframes position2 {
+    0% {
+          transform: translate(10vw, 10vw);
+  }
+
+  41% {
+    transform: translate(35vw, -14vw);
+  }
+  100% {
+    transform: translate(5vw, 25vw);
+  
+    }
+}
+@keyframes position3 {
+    0% {
+          transform: translate(20vw, 13vw);
+  }
+
+  24% {
+    transform: translate(25vw, -17vw);
+  }
+  100% {
+    transform: translate(15vw, 29vw);
+  
+    }
+}
+
+@keyframes position4 {
+    0% {
+          transform: translate(10vw, 17vw);
+  }
+
+  45% {
+    transform: translate(2vw, -12vw);
+  }
+  100% {
+    transform: translate(16vw, 18vw);
+  
+    }
+}
+@keyframes position5 {
+    0% {
+          transform: translate(16vw, 12vw);
+  }
+
+  45% {
+    transform: translate(15vw, 27vw);
+  }
+  100% {
+    transform: translate(6vw, 16vw);
+  
+    }
+}
+@keyframes position6 {
+    0% {
+          transform: translate(9vw, 10vw);
+  }
+
+  45% {
+    transform: translate(-5vw, -20vw);
+  }
+  100% {
+    transform: translate(26vw, 9vw);
+  
+    }
+}
+@keyframes position7 {
+    0% {
+          transform: translate(49vw, 10vw);
+  }
+
+  45% {
+    transform: translate(25vw, -29vw);
+  }
+  100% {
+    transform: translate(22vw, 39vw);
+  
+    }
+}
+
+@keyframes position8 {
+    0% {
+          transform: translate(0, 30vw);
+  }
+
+  45% {
+    transform: translate(-15vw, -5vw);
+  }
+  100% {
+    transform: translate(10vw, 15vw);
+  
+    }
+}
+
+.hidden {
+    display: none;
+}
